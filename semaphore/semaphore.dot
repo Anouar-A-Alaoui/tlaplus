@@ -1,0 +1,21 @@
+strict digraph DiskGraph {
+edge [colorscheme="paired12"]
+nodesep=0.35;
+subgraph cluster_graph {
+color="white";
+-1030374140362733452 [label="color = \"red\"",style = filled]
+-1030374140362733452 -> -377408619728082411 [label="TurnGreen",color="2",fontcolor="2"];
+-377408619728082411 [label="color = \"green\""];
+-377408619728082411 -> 5130592482916408301 [label="TurnYellow",color="3",fontcolor="3"];
+5130592482916408301 [label="color = \"yellow\""];
+5130592482916408301 -> -1030374140362733452 [label="TurnRed",color="4",fontcolor="4"];
+{rank = same; -1030374140362733452;}
+{rank = same; -377408619728082411;}
+{rank = same; 5130592482916408301;}
+}
+subgraph cluster_legend {graph[style=bold];label = "Next State Actions" style="solid"
+node [ labeljust="l",colorscheme="paired12",style=filled,shape=record ]
+TurnGreen [label="TurnGreen",fillcolor=2]
+TurnYellow [label="TurnYellow",fillcolor=3]
+TurnRed [label="TurnRed",fillcolor=4]
+}}
